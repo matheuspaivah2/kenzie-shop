@@ -1,10 +1,17 @@
-import { ADD_TO_CART } from "./actionsTypes";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "./actionsTypes";
 
-const cartReducer = (state = [], action) => {
+const list = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartReducer = (state = list, action) => {
+  const product = action.product;
   switch (action.type) {
     case ADD_TO_CART:
-      const product = action.product;
       return [...state, product];
+
+    case REMOVE_FROM_CART:
+      const { list } = action;
+      return list;
+
     default:
       return state;
   }

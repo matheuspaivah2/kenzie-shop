@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-
-  max-width: 85%;
+  width: 98%;
+  margin: 0;
   justify-content: center;
   align-items: center;
-
+  margin-bottom: 50px;
   ul {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
+    width: 85%;
+    margin: 0 auto;
+    column-gap: 10px;
     justify-content: center;
     align-items: center;
   }
