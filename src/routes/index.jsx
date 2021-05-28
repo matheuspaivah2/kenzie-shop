@@ -1,36 +1,16 @@
 import { Switch, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
-import Login from "../pages/Login";
-import Singup from "../pages/Singup";
-import NotFound from '../pages/NotFound'
+import Cart from "../pages/Cart";
 
-const Routes = ({isValidated, setIsValidated}) => {
-
-  
-  
+const Routes = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Login setIsValidated={setIsValidated} />
+        <Home />
       </Route>
-      <Route path="/login">
-        <Login setIsValidated={setIsValidated} />
-      </Route>
-      <Route path="/register">
-        <Singup />
-      </Route>
-      <Route path="/home">
-        {
-          isValidated ?
-            <Home isValidated={isValidated} />
-          :
-            <Login setIsValidated={setIsValidated} />   
-        }
-        
-      </Route>
-      <Route>
-        <NotFound/>
+      <Route path="/Cart">
+        <Cart />
       </Route>
     </Switch>
   );
