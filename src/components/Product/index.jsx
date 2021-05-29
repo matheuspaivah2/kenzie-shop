@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Container } from "./styles";
 import addToCartThunk from "../../store/modules/cart/thunks";
-import removeFromCartThunk from "../../store/modules/cart/thunks";
+import { removeFromCartThunk } from "../../store/modules/cart/thunks";
 
 const Product = ({ item, btActive }) => {
   const { name, price, image, id } = item;
