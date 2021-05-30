@@ -7,6 +7,10 @@ export const Container = styled.div`
   width: 90%;
   max-width: 95%;
   margin-top: 5%;
+
+  .empty {
+    font-size: 2rem;
+  }
 `;
 export const ContainerProducts = styled.div`
   display: flex;

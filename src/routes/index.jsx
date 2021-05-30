@@ -2,6 +2,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Cart from "../pages/Cart";
+import NotFound from "../pages/NotFound";
 
 const Routes = () => {
   return (
@@ -11,6 +12,9 @@ const Routes = () => {
       </Route>
       <Route path="/cart">
         <Cart />
+      </Route>
+      <Route>
+        <NotFound />
       </Route>
     </Switch>
   );

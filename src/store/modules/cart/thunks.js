@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart } from "./actions";
+import { addToCart, removeFromCart, finishiOrder } from "./actions";
 
 const addToCartThunk = (product, setError) => (dispatch) => {
   const list = JSON.parse(localStorage.getItem("cart")) || [];
@@ -17,4 +17,11 @@ export const removeFromCartThunk = (id) => (dispatch, getStore) => {
   const list = cart.filter((product) => product.id !== id);
   localStorage.setItem("cart", JSON.stringify(list));
   dispatch(removeFromCart(list));
+};
+
+export const finishOrderThunk = () => (dispatch) => {
+  const list = [];
+  localStorage.setItem("cart", JSON.stringify(list));
+  dispatch(finishiOrder(list));
+  alert("Pedido efetuado com sucesso");
 };
