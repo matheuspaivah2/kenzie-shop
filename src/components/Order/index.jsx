@@ -26,9 +26,11 @@ const Order = () => {
               <span>{cart.length} Produtos</span>
               <span>
                 R${" "}
-                {cart.reduce((acc, curr) => {
-                  return acc + curr.price;
-                }, 0)}
+                {cart
+                  .reduce((acc, curr) => {
+                    return acc + curr.price;
+                  }, 0)
+                  .toFixed(2)}
               </span>
             </div>
             <button onClick={handleFinish}>Finalizar Compra</button>
